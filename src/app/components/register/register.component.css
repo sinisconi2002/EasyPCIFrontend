@@ -24,3 +24,15 @@
     position: relative;
     z-index: 1;
   }
+
+  .text-danger {
+    color: #dc3545;
+  }
+  
+  .form-control.ng-invalid.ng-touched {
+    border-color: #dc3545;
+  }
+  
+  .form-control.ng-valid.ng-touched {
+    border-color: #28a745;
+  }

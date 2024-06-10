@@ -33,9 +33,19 @@ export class RegisterComponent {
         }
         else this.router.navigate(["/register"]);
       }
+      else {
+        // Highlight validation errors
+        this.markFormGroupTouched(form);
+      }
     }
-
     private checkPasswordsMatch(): boolean {
       return this.credentials.password === this.credentials.confirmPassword;
+    }
+
+    private markFormGroupTouched(formGroup: NgForm) {
+      Object.keys(formGroup.controls).forEach(key => {
+        const control = formGroup.controls[key];
+        control.markAsTouched();
+      });
     }
 }

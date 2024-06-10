@@ -33,5 +33,16 @@ export class LoginComponent {
             error: (err: HttpErrorResponse) => this.invalidLogin = true
         });
       }
+      else {
+        // Highlight validation errors
+        this.markFormGroupTouched(form);
+      }
+    }
+
+    private markFormGroupTouched(formGroup: NgForm) {
+      Object.keys(formGroup.controls).forEach(key => {
+        const control = formGroup.controls[key];
+        control.markAsTouched();
+      });
     }
 }
