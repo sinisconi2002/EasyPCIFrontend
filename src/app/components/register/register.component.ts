@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
-import { BackendHttpService } from 'src/app/services/backend.service';
+import {UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -18,9 +18,9 @@ export class RegisterComponent {
       confirmPassword: ''
     };
 
-    private httpService: BackendHttpService;
+    private httpService: UserService;
 
-    constructor(httpService: BackendHttpService, private router: Router) { 
+    constructor(httpService: UserService, private router: Router) { 
       this.httpService  = httpService;
     }
 
@@ -34,7 +34,6 @@ export class RegisterComponent {
         else this.router.navigate(["/register"]);
       }
       else {
-        // Highlight validation errors
         this.markFormGroupTouched(form);
       }
     }

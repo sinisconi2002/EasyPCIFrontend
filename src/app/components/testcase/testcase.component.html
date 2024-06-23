@@ -1,1 +1,44 @@
-<p>testcase works!</p>
+<div class="background-container">
+    <div class="container-fluid py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow">
+            <div class="card-header text-white">
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">Existing test cases</h3>
+                <div>
+                  <input 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Search..." 
+                >
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-list">
+                <div *ngFor="let testCase of paginatedTestcases" class="card mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title">Test case name: {{ testCase.name }}</h5>
+                    <button class="btn btn-outline-primary" [routerLink]="['/navigation/test-cases', testCase.id]">View Details</button>
+                  </div>
+                </div>
+                <div *ngIf="paginatedTestcases.length === 0" class="alert alert-warning" role="alert">
+                  No test cases found.
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-outline-secondary" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+                <span>{{ currentPage }} / {{ totalPages }}</span>
+                <button class="btn btn-outline-secondary" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+                <button class="btn btn-success" [routerLink]="['create-testcase']">Add New Test Case</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

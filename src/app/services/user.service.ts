@@ -6,7 +6,7 @@ import { AuthenticatedResponse } from "../models/authenticatedResponse";
 
 @Injectable({providedIn: 'root'})
 
-export class BackendHttpService {
+export class UserService {
     private httpService: HttpClient;
 
     constructor(httpService: HttpClient) {

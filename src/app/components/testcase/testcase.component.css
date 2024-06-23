@@ -1,0 +1,59 @@
+.background-container {
+    background: url('https://nordic.allianzgi.com/-/media/allianzgi/eu/updates/investment-ideas/thematic-investing/cybercrime/cybercrime.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  
+.card {
+max-width: 100%;
+background-color: rgba(255, 255, 255, 0.9);
+border: none;
+}
+
+.card-header {
+    background-color: #003366; 
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  
+.card-title {
+font-size: 1.5rem;
+}
+
+.card-body {
+padding: 1.25rem;
+}
+
+.card-list {
+max-height: 500px;
+overflow-y: auto;
+}
+
+.card-text {
+font-size: 1.2rem;
+}
+
+.card-footer {
+background-color: rgba(0, 51, 102, 0.03); 
+border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn-outline-primary {
+color: #003366; 
+border-color: #003366; 
+}
+
+.btn-outline-primary:hover {
+background-color: #003366;
+color: #fff;
+}
+
+.btn-success {
+background-color: #28a745;
+border-color: #28a745;
+}
+
+.btn-success:hover {
+background-color: #218838;
+border-color: #1e7e34;
+}

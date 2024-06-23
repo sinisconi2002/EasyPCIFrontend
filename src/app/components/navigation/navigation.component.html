@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark custom-dark-blue">
+  <div class="container">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['cards']" routerLinkActive="active">Cards</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['remotes']" routerLinkActive="active">Remotes</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['test-cases']" routerLinkActive="active">Test Cases</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['tests']" routerLinkActive="active">Tests</a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-outline-light" (click)="logout()">Logout</button>
+  </div>
+</nav>
+<router-outlet></router-outlet>

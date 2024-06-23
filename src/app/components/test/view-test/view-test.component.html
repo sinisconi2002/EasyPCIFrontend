@@ -1,1 +1,43 @@
-<p>view-test works!</p>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://nordic.allianzgi.com/-/media/allianzgi/eu/updates/investment-ideas/thematic-investing/cybercrime/cybercrime.jpg'); background-size: cover; z-index: -1; filter: brightness(50%);"></div>
+
+<div class="container mt-5" *ngIf="testResult">
+  <div class="card shadow-lg" style="border-radius: 15px;">
+    <div class="card-header text-white" style="background-color: #003366; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <h4 class="mb-0">{{ testResult.name }}</h4>
+    </div>
+    <div class="card-body p-4">
+      <div class="form-group mb-4">
+        <label class="form-label font-weight-bold">Test Case</label>
+        <div class="d-flex align-items-center">
+            <p class="mb-0">{{ testResult.testCase.name }}</p>
+            <button class="btn btn-outline-primary btn-sm ml-3" [routerLink]="['/navigation/test-cases', testResult.testCase.id]" style="margin-left: 10px;">View Test case Details</button>
+          </div>
+      </div>
+      <div class="form-group mb-4">
+        <label class="form-label font-weight-bold">Remote</label>
+        <div class="d-flex align-items-center">
+            <p class="mb-0">{{ testResult.remote.name }}</p>
+            <button class="btn btn-outline-primary btn-sm ml-3" [routerLink]="['/navigation/remo', testResult.remote.id]" style="margin-left: 10px;">View Remote Details</button>
+          </div>
+      </div>
+      <div class="form-group mb-4">
+        <label class="form-label font-weight-bold">Result</label>
+        <div class="p-3" style="background-color: #f8f9fa; border-radius: 5px;" [innerHTML]="testResult.result"></div>
+      </div>
+      <div class="form-group mb-4">
+        <label class="form-label font-weight-bold">Core dump file</label>
+        <div class="d-flex align-items-center">
+            <p class="mb-0">{{ testResult.linkToCore }}</p>
+            <button class="btn btn-outline-primary btn-sm ml-3" (click)="downloadCoreDump(this.testResult.linkToCore)" style="margin-left: 10px;" >Download core dump</button>
+        </div>
+      </div>
+      <div class="form-group mb-4">
+        <label class="form-label font-weight-bold">Tester</label>
+        <div class="p-3" style="background-color: #f8f9fa; border-radius: 5px;">{{ testResult.tester }}</div>
+      </div>
+      <div class="text-right">
+        <button class="btn btn-primary mr-2" [routerLink]="['/navigation/tests']">Back</button>
+      </div>
+    </div>
+  </div>
+</div>

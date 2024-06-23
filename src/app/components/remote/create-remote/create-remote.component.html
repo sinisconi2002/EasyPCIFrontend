@@ -1,1 +1,31 @@
-<p>create-remote works!</p>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://nordic.allianzgi.com/-/media/allianzgi/eu/updates/investment-ideas/thematic-investing/cybercrime/cybercrime.jpg'); background-size: cover; z-index: -1; filter: brightness(50%);"></div>
+<div class="container mt-5">
+  <div class="card shadow-lg" style="border-radius: 15px;">
+    <div class="card-header text-white" style="background-color: #003366; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <h4 class="mb-0">Create New Remote</h4>
+    </div>
+    <div class="card-body p-4">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="cardNumber" class="form-label">Remote Name</label>
+          <input type="text" class="form-control" id="remoteName" [(ngModel)]="remote.name" name="remoteName" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="cardType" class="form-label">Remote address</label>
+          <input type="text" class="form-control" id="cardType" [(ngModel)]="remote.serverAddress" name="cardType" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="cardHolder" class="form-label">Remote User</label>
+          <input type="text" class="form-control" id="remoteUsername" [(ngModel)]="remote.username" name="remoteUsername" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="expirationDate" class="form-label">Remote password</label>
+          <input type="text" class="form-control" id="expirationDate" [(ngModel)]="remote.password" name="expirationDate" required>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2" style="background-color: #003366; border-color: #003366;">Create Remote</button>
+        <button class="btn btn-secondary" [routerLink]="['/navigation/remotes']" style="margin-left: 10px;">Back</button>
+      </form>
+    </div>
+  </div>
+</div>
+

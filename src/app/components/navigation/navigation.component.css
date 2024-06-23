@@ -1,0 +1,16 @@
+.custom-dark-blue {
+    background-color: #003366;
+  }
+  
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    margin: 0 1rem;
+  }
+  
+  .btn-outline-light {
+    margin-left: auto;
+  }
+  

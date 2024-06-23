@@ -1,1 +1,40 @@
-<p>test works!</p>
+<div class="background-container">
+    <div class="container-fluid py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow">
+            <div class="card-header text-white">
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">Existing test results</h3>
+                <div>
+                  <input type="text" class="form-control" placeholder="Search..." (input)="onSearch($event)">
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-list">
+                <div *ngFor="let testResult of paginatedTestResults" class="card mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title">Test result name: {{ testResult.name }}</h5>
+                    <button class="btn btn-outline-primary" [routerLink]="['/navigation/tests', testResult.id]">View Details</button>
+                  </div>
+                </div>
+                <div *ngIf="paginatedTestResults.length === 0" class="alert alert-warning" role="alert">
+                  No test results found.
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-outline-secondary" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+                <span>{{ currentPage }} / {{ totalPages }}</span>
+                <button class="btn btn-outline-secondary" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+                <button class="btn btn-success" [routerLink]="['run-test']">Run test</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

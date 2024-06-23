@@ -1,1 +1,33 @@
-<p>create-testcase works!</p>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://nordic.allianzgi.com/-/media/allianzgi/eu/updates/investment-ideas/thematic-investing/cybercrime/cybercrime.jpg'); background-size: cover; z-index: -1;"></div>
+
+<div class="container mt-5">
+  <div class="card shadow-lg" style="border-radius: 15px;">
+    <div class="card-header text-white" style="background-color: #003366; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <h4 class="mb-0">Create Test Case</h4>
+    </div>
+    <div class="card-body p-4">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="testCase.name" name="name" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="description" class="form-label">Description</label>
+          <angular-editor [(ngModel)]="testCase.description" name="description" [config]="editorConfig"></angular-editor>
+        </div>
+        <div class="form-group mb-3">
+          <label for="card" class="form-label">Select a Card (select a value from below)</label>
+          <select class="form-control" id="card" [(ngModel)]="selectedCardId" name="card" required>
+            <option *ngFor="let card of testCaseCreatorDto.cards" [ngValue]="card.id">{{ card.cardNumber }}</option>
+          </select>
+        </div>
+        <div class="form-group mb-3">
+          <label for="process" class="form-label">Process</label>
+          <input type="text" class="form-control" id="process" [(ngModel)]="testCase.process" name="process" required>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2" style="background-color: #003366; border-color: #003366;">Create Test Case</button>
+        <button class="btn btn-secondary" [routerLink]="['/navigation/test-cases']" style="margin-left: 10px;">Back</button>
+      </form>
+    </div>
+  </div>
+</div>
