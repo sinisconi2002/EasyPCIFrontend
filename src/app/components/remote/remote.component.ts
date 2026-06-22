@@ -4,6 +4,7 @@ import { RemoteService } from './remote.service';
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-remote',
   templateUrl: './remote.component.html',
   styleUrls: ['./remote.component.css']

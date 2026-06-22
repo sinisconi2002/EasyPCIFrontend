@@ -4,6 +4,7 @@ import { TestResultService } from './test.service'
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']

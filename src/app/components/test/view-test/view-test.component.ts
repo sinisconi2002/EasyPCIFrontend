@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
 import { saveAs } from 'file-saver';
 
 @Component({
-  selector: 'app-view-test',
   standalone: true,
+  selector: 'app-view-test',
   imports: [RouterModule, FormsModule, CommonModule],
   templateUrl: './view-test.component.html',
   styleUrl: './view-test.component.css'

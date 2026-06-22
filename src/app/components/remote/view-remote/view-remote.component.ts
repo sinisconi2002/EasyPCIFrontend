@@ -6,8 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-view-remote',
   standalone: true,
+  selector: 'app-view-remote',
   imports: [FormsModule, RouterModule, CommonModule],
   templateUrl: './view-remote.component.html',
   styleUrl: './view-remote.component.css'

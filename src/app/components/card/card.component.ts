@@ -4,6 +4,7 @@ import { CardService } from './card.service';
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']

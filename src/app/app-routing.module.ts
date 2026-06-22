@@ -15,22 +15,22 @@ const routes: Routes = [];
         {
           path: 'cards',
           loadChildren: () => import('./components/card/card.module').then((m)=>m.CardModule),
-          canActivate: [AuthGuard]
+          // canActivate: [AuthGuard]
         },
         {
           path: 'remotes',
           loadChildren: () => import('./components/remote/remote.module').then((m)=>m.RemoteModule),
-          canActivate: [AuthGuard]
+          //canActivate: [AuthGuard]
         },
         {
           path: 'test-cases',
           loadChildren: () => import('./components/testcase/testcase.module').then((m)=>m.TestcaseModule),
-          canActivate: [AuthGuard]
+          //canActivate: [AuthGuard]
         },
         {
           path: 'tests',
           loadChildren: () => import('./components/test/test.module').then((m)=>m.TestModule),
-          canActivate: [AuthGuard]
+          //canActivate: [AuthGuard]
         }
       ]
     },

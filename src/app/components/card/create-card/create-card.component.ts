@@ -7,8 +7,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { v4 as uuidv4 } from 'uuid';
 import { CommonModule } from '@angular/common';
 @Component({
-  selector: 'app-create-card',
   standalone: true,
+  selector: 'app-create-card',
   imports: [FormsModule, RouterModule, CommonModule],
   templateUrl: './create-card.component.html',
   styleUrl: './create-card.component.css'

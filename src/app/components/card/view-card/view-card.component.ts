@@ -6,8 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-view-card',
   standalone: true,
+  selector: 'app-view-card',
   imports: [FormsModule, RouterModule, CommonModule],
   templateUrl: './view-card.component.html',
   styleUrl: './view-card.component.css',

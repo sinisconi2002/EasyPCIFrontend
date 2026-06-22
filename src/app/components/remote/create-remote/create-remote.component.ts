@@ -6,8 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-create-remote',
   standalone: true,
+  selector: 'app-create-remote',
   imports: [FormsModule, RouterModule],
   templateUrl: './create-remote.component.html',
   styleUrl: './create-remote.component.css'

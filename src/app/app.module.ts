@@ -35,7 +35,7 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ["easpyciapi.azurewebsites.net"],
+        allowedDomains: ["easypcibackend.onrender.com"],
         disallowedRoutes: []
       }
     }),

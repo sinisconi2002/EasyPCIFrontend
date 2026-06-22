@@ -4,6 +4,7 @@ import { TestcaseService } from './testcase.service';
 import { Router } from '@angular/router';
 
 @Component({
+  standalone: false,
   selector: 'app-testcase',
   templateUrl: './testcase.component.html',
   styleUrls: ['./testcase.component.css']

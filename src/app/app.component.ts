@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'EasyPCI';
   constructor() {
-    localStorage.setItem('apiUrl', 'localhost:7206');
+    localStorage.setItem('apiUrl', 'easypcibackend.onrender.com');
     
   }
 }

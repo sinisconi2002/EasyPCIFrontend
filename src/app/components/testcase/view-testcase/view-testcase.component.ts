@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-view-testcase',
   standalone: true,
+  selector: 'app-view-testcase',
   imports: [RouterModule, FormsModule, CommonModule],
   templateUrl: './view-testcase.component.html',
   styleUrl: './view-testcase.component.css'

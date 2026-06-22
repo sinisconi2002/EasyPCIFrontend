@@ -15,16 +15,16 @@ export class UserService {
 
     //user-side
     register(userData: User): Observable<User> {
-        return this.httpService.post<User>('https://easpyciapi.azurewebsites.net/users/add_user', userData);
+        return this.httpService.post<User>('https://easypcibackend.onrender.com/users/add_user', userData);
     }
 
     getUser(userId: string): Observable<User> {
-        return this.httpService.get<User>('https://easpyciapi.azurewebsites.net/users/' + userId);
+        return this.httpService.get<User>('https://easypcibackend.onrender.com/users/' + userId);
     }
 
     authenticate(userLogin: User): Observable<AuthenticatedResponse> {
-        return this.httpService.post<AuthenticatedResponse>('https://easpyciapi.azurewebsites.net/users/login', userLogin, 
-               { headers: new HttpHeaders({ "Content-Type": "application/json"}) });
+        return this.httpService.post<AuthenticatedResponse>('https://easypcibackend.onrender.com/users/login', userLogin,
+            { headers: new HttpHeaders({ "Content-Type": "application/json" }) });
     }
 
 }

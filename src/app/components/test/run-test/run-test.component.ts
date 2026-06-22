@@ -10,8 +10,8 @@ import { LoadingComponent } from '../loading-component/loading-component.compone
 import { TestResult } from 'src/app/models/testResult';
 
 @Component({
-  selector: 'app-run-test',
   standalone: true,
+  selector: 'app-run-test',
   imports: [FormsModule, RouterModule, CommonModule, LoadingComponent],
   templateUrl: './run-test.component.html',
   styleUrls: ['./run-test.component.css']
