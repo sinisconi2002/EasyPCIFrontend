@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'EasyPCI';
   constructor() {
-    localStorage.setItem('apiUrl', 'easypcibackend.onrender.com');
-    
+    // localStorage.setItem('apiUrl', 'easypcibackend.onrender.com');
+    localStorage.setItem('apiUrl', 'localhost:7206');
   }
 }

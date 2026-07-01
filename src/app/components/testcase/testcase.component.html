@@ -19,7 +19,12 @@
               <div class="card-list">
                 <div *ngFor="let testCase of paginatedTestcases" class="card mb-3">
                   <div class="card-body">
-                    <h5 class="card-title">Test case name: {{ testCase.name }}</h5>
+                    <h5 class="card-title">
+                      Test case name: {{ testCase.name }}
+                      <span class="badge ms-2" [ngClass]="testCase.engine === 1 ? 'bg-success' : 'bg-secondary'">
+                        {{ testCase.engine === 1 ? 'Modern AI' : 'Classic Regex' }}
+                      </span>
+                    </h5>
                     <button class="btn btn-outline-primary" [routerLink]="['/navigation/test-cases', testCase.id]">View Details</button>
                   </div>
                 </div>

@@ -13,6 +13,7 @@ export class CardService {
 
   constructor(private http: HttpClient) {
     this.api = localStorage.getItem('apiUrl');
+    console.log(`API URL: ${this.api}`);
     this.apiUrl = `https://${this.api as string}/cards`;
   }
 
